@@ -9,7 +9,8 @@ public class Employee {
 //	Initialize variables
 	private final int WAGE_PER_HOUR = 20;
 	private final int FULL_DAY_HOUR = 8;
-	int dailyWage = 0;
+	private final int HALF_DAY_HOUR = 4;
+	public int dailyWage = 0;
 	
 //	Check Employee is Present or Absent
 	public boolean isPresent() {
@@ -25,8 +26,14 @@ public class Employee {
 
 //	Calculate Daily Employee Wage
 	public int dailyWage() {
-		dailyWage = WAGE_PER_HOUR * FULL_DAY_HOUR;
-		return dailyWage;
+		if (isPresent()) {
+			dailyWage = WAGE_PER_HOUR * FULL_DAY_HOUR;
+			return dailyWage;
+			
+		} else {
+			dailyWage = WAGE_PER_HOUR * HALF_DAY_HOUR;
+			return dailyWage;
+		}
 	}
 	
 }

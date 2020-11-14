@@ -17,7 +17,7 @@ public class CalculateEmployeeWage {
 			System.out.println("Employee is Present! \nDaily Wage = " + emp.dailyWage());
 			
 		} else {
-			System.out.println("Employee is Absent!");
+			System.out.println("Employee is Absent! \nDaily Wage = " + emp.dailyWage);
 		}
 	}
 
