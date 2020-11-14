@@ -12,9 +12,9 @@ public class CalculateEmployeeWage {
 //		Initialize object of Employee Class
 		Employee emp = new Employee();
 		
-//		Display Employee is Present or Absent
+//		Display Employee is Present or Absent & Calculate Daily Wage
 		if (emp.isPresent()) {
-			System.out.println("Employee is Present!");
+			System.out.println("Employee is Present! \nDaily Wage = " + emp.dailyWage());
 			
 		} else {
 			System.out.println("Employee is Absent!");
