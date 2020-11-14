@@ -59,7 +59,7 @@ public class Employee {
 		}
 	}
 	
-//	Calculating Wages for a Month
+//	Calculate Wages till it reached the condition Total-Working-Hour=100 OR Day=30
 	public void computeWages() {
 		System.out.println("Day \tAttendance \tWork Status \tDaily Wage \tTotal Wage");
 		
@@ -75,7 +75,8 @@ public class Employee {
 			}
 			day ++;
 		}
-		System.out.println("\nTotal Working Hour is = " + totalHour + " Hour");
+		System.out.println("\nTotal Working Day = " + (day-1) + " Day");
+		System.out.println("Total Working Hour = " + totalHour + " Hour");
 		System.out.println("Total Employee Wage = " + totalWage);
 	}
 

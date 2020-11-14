@@ -9,7 +9,7 @@ public class CalculateEmployeeWage {
 	}
 	
 	public static void main(String[] args) {
-//		Calculate Employee Wage for a Month
+//		Calculate Employee Wage till it reached the condition Total-Working-Hour=100 OR Day=30
 		new Employee().computeWages();
 	}
 
