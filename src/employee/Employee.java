@@ -10,11 +10,12 @@ public class Employee {
 	private final int WAGE_PER_HOUR = 20;
 	private final int FULL_DAY_HOUR = 8;
 	private final int HALF_DAY_HOUR = 4;
-	public int dailyWage = 0;
-	public String workStatus="NULL";
+	private int dailyWage = 0;
+	private String workStatus=null;
+	private int totalWage = 0;
 	
 //	Check Employee is Present or Absent
-	public boolean isPresent() {
+	private boolean isPresent() {
 		boolean rand = random.nextBoolean();
 		
 		if (rand) {
@@ -36,15 +37,17 @@ public class Employee {
 	}
 	
 //	Calculate Daily Employee Wage
-	public void dailyWage() {
+	private void dailyWage() {
 		workStatus();
 		switch(workStatus) {
 			case "Full-Time" :
 				dailyWage = WAGE_PER_HOUR * FULL_DAY_HOUR;
+				totalWage += dailyWage;
 				break;
 			
 			case "Part-Time" :
 				dailyWage = WAGE_PER_HOUR * HALF_DAY_HOUR;
+				totalWage += dailyWage;
 				break;
 			
 			default :
@@ -52,4 +55,22 @@ public class Employee {
 		}
 	}
 	
+//	Calculating Wages for a Month
+	public void computeWages() {
+		System.out.println("Day \tAttendance \tWork Status \tDaily Wage \tTotal Wage");
+		
+		for (int i=1; i<=30; i++) {
+			if (isPresent()) {
+				dailyWage();
+				System.out.println(i + "\t Present\t " + workStatus +"\t   " + dailyWage + "\t\t  " + totalWage);
+				
+			} else {
+				workStatus = "Null     ";
+				dailyWage = 0;
+				System.out.println(i + "\t Absent \t " + workStatus +"\t   " + dailyWage + "\t\t  " + totalWage);
+			}
+		}
+		System.out.println("\nTotal Employee Wage for a Month is = " + totalWage);
+	}
+
 }
