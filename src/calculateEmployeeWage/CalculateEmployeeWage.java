@@ -9,7 +9,7 @@ public class CalculateEmployeeWage {
 	}
 	
 	public static void main(String[] args) {
-//		Call computeWages() method
+//		Calculate Employee Wage for a Month
 		new Employee().computeWages();
 	}
 
