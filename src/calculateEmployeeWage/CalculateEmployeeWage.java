@@ -14,10 +14,11 @@ public class CalculateEmployeeWage {
 		
 //		Display Employee is Present or Absent & Calculate Daily Wage
 		if (emp.isPresent()) {
-			System.out.println("Employee is Present! \nDaily Wage = " + emp.dailyWage());
+			emp.dailyWage();
+			System.out.println("Employee is Present! \nDaily Wage = " + emp.dailyWage + " \nWork Status : " + emp.workStatus);
 			
 		} else {
-			System.out.println("Employee is Absent! \nDaily Wage = " + emp.dailyWage);
+			System.out.println("Employee is Absent! \nDaily Wage = " + emp.dailyWage + " \nWork Status : " + emp.workStatus);
 		}
 	}
 

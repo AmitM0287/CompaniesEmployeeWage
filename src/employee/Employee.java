@@ -11,6 +11,7 @@ public class Employee {
 	private final int FULL_DAY_HOUR = 8;
 	private final int HALF_DAY_HOUR = 4;
 	public int dailyWage = 0;
+	public String workStatus="NULL";
 	
 //	Check Employee is Present or Absent
 	public boolean isPresent() {
@@ -24,15 +25,30 @@ public class Employee {
 		}
 	}
 
-//	Calculate Daily Employee Wage
-	public int dailyWage() {
+//	Check Employee work status
+	private void workStatus() {
 		if (isPresent()) {
-			dailyWage = WAGE_PER_HOUR * FULL_DAY_HOUR;
-			return dailyWage;
+			workStatus = "Full-Time";
 			
 		} else {
-			dailyWage = WAGE_PER_HOUR * HALF_DAY_HOUR;
-			return dailyWage;
+			workStatus = "Part-Time";
+		}
+	}
+	
+//	Calculate Daily Employee Wage
+	public void dailyWage() {
+		workStatus();
+		switch(workStatus) {
+			case "Full-Time" :
+				dailyWage = WAGE_PER_HOUR * FULL_DAY_HOUR;
+				break;
+			
+			case "Part-Time" :
+				dailyWage = WAGE_PER_HOUR * HALF_DAY_HOUR;
+				break;
+			
+			default :
+				System.out.println("Invalid Output!");
 		}
 	}
 	
