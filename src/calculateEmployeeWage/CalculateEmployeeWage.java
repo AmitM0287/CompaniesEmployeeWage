@@ -2,8 +2,6 @@ package calculateEmployeeWage;
 
 import java.util.Scanner;
 
-import employee.Employee;
-
 /**
  * 
  * @author AmitM
