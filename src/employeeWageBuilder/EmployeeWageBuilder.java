@@ -47,6 +47,10 @@ public class EmployeeWageBuilder {
 		EmployeeWageBuilder dMart=new EmployeeWageBuilder("Dmart", 28, 12, 18);
 		dMart.computeEmpWage();
 		System.out.println(dMart);
+		
+		EmployeeWageBuilder Reliance=new EmployeeWageBuilder("Reliance", 22, 16, 20);
+		Reliance.computeEmpWage();
+		System.out.println(Reliance);
 	}
 
 }
